@@ -1277,3 +1277,96 @@ org.attoparser.ParseException: (Line = 590, Column = 3) Incomplete structure: "<
 2021-02-13 12:18:38.073  INFO 61525 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2021-02-13 12:18:38.074  INFO 61525 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
 2021-02-13 12:18:38.078  INFO 61525 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2021-02-13 13:27:08.745  INFO 67096 --- [restartedMain] com.hailin.beizhai.BeizhaiApplication    : Starting BeizhaiApplication using Java 1.8.0_275 on zhouhailindeMacBook-Air.local with PID 67096 (/Users/zhouhailin/idea-code/beizhai/target/classes started by zhouhailin in /Users/zhouhailin/idea-code/beizhai)
+2021-02-13 13:27:08.746 DEBUG 67096 --- [restartedMain] com.hailin.beizhai.BeizhaiApplication    : Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-02-13 13:27:08.746  INFO 67096 --- [restartedMain] com.hailin.beizhai.BeizhaiApplication    : The following profiles are active: dev
+2021-02-13 13:27:08.766  INFO 67096 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-13 13:27:08.766  INFO 67096 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-13 13:27:09.031  INFO 67096 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-13 13:27:09.037  INFO 67096 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2021-02-13 13:27:09.351  INFO 67096 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-13 13:27:09.356  INFO 67096 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-13 13:27:09.356  INFO 67096 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-13 13:27:09.404  INFO 67096 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-13 13:27:09.404  INFO 67096 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 638 ms
+2021-02-13 13:27:09.498  INFO 67096 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-13 13:27:09.516  INFO 67096 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-13 13:27:09.591  INFO 67096 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-13 13:27:09.621  INFO 67096 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-13 13:27:09.622  WARN 67096 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-02-13 13:27:09.799  INFO 67096 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-13 13:27:09.807  INFO 67096 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-02-13 13:27:10.069  INFO 67096 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-13 13:27:10.073  INFO 67096 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-13 13:27:10.108  INFO 67096 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-13 13:27:10.141  WARN 67096 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-13 13:27:10.231  INFO 67096 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-13 13:27:10.278  INFO 67096 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-02-13 13:27:10.421  INFO 67096 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-13 13:27:10.427  INFO 67096 --- [restartedMain] com.hailin.beizhai.BeizhaiApplication    : Started BeizhaiApplication in 1.884 seconds (JVM running for 2.388)
+2021-02-13 13:38:44.784  INFO 67096 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-02-13 13:38:44.785  INFO 67096 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-02-13 13:38:44.786  INFO 67096 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-02-13 13:38:44.789  INFO 67096 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-02-13 13:38:47.049  INFO 67804 --- [restartedMain] com.hailin.beizhai.BeizhaiApplication    : Starting BeizhaiApplication using Java 1.8.0_275 on zhouhailindeMacBook-Air.local with PID 67804 (/Users/zhouhailin/idea-code/beizhai/target/classes started by zhouhailin in /Users/zhouhailin/idea-code/beizhai)
+2021-02-13 13:38:47.050 DEBUG 67804 --- [restartedMain] com.hailin.beizhai.BeizhaiApplication    : Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-02-13 13:38:47.050  INFO 67804 --- [restartedMain] com.hailin.beizhai.BeizhaiApplication    : The following profiles are active: dev
+2021-02-13 13:38:47.068  INFO 67804 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-13 13:38:47.068  INFO 67804 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-13 13:38:47.316  INFO 67804 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-13 13:38:47.322  INFO 67804 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2021-02-13 13:38:47.598  INFO 67804 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-13 13:38:47.602  INFO 67804 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-13 13:38:47.602  INFO 67804 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-13 13:38:47.632  INFO 67804 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-13 13:38:47.633  INFO 67804 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 564 ms
+2021-02-13 13:38:47.712  INFO 67804 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-13 13:38:47.726  INFO 67804 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-13 13:38:47.788  INFO 67804 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-13 13:38:47.821  INFO 67804 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-13 13:38:47.822  WARN 67804 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-02-13 13:38:47.982  INFO 67804 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-13 13:38:47.988  INFO 67804 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-02-13 13:38:48.295  INFO 67804 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-13 13:38:48.299  INFO 67804 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-13 13:38:48.336  INFO 67804 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-13 13:38:48.371  WARN 67804 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-13 13:38:48.462  INFO 67804 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-13 13:38:48.509  INFO 67804 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-02-13 13:38:48.652  INFO 67804 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-13 13:38:48.659  INFO 67804 --- [restartedMain] com.hailin.beizhai.BeizhaiApplication    : Started BeizhaiApplication in 1.792 seconds (JVM running for 2.24)
+2021-02-13 13:38:48.723  INFO 67804 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-02-13 13:38:48.723  INFO 67804 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-02-13 13:38:48.725  INFO 67804 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-02-13 13:38:48.727  INFO 67804 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-02-13 14:01:56.022  INFO 69123 --- [restartedMain] com.hailin.beizhai.BeizhaiApplication    : Starting BeizhaiApplication using Java 1.8.0_275 on zhouhailindeMacBook-Air.local with PID 69123 (/Users/zhouhailin/idea-code/beizhai/target/classes started by zhouhailin in /Users/zhouhailin/idea-code/beizhai)
+2021-02-13 14:01:56.023 DEBUG 69123 --- [restartedMain] com.hailin.beizhai.BeizhaiApplication    : Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-02-13 14:01:56.023  INFO 69123 --- [restartedMain] com.hailin.beizhai.BeizhaiApplication    : The following profiles are active: dev
+2021-02-13 14:01:56.042  INFO 69123 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-13 14:01:56.042  INFO 69123 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-13 14:01:56.302  INFO 69123 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-13 14:01:56.307  INFO 69123 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2021-02-13 14:01:56.602  INFO 69123 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-13 14:01:56.606  INFO 69123 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-13 14:01:56.606  INFO 69123 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-13 14:01:56.642  INFO 69123 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-13 14:01:56.642  INFO 69123 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 599 ms
+2021-02-13 14:01:56.727  INFO 69123 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-13 14:01:56.741  INFO 69123 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-13 14:01:56.803  INFO 69123 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-13 14:01:56.833  INFO 69123 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-13 14:01:56.834  WARN 69123 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-02-13 14:01:57.011  INFO 69123 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-13 14:01:57.018  INFO 69123 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-02-13 14:01:57.650  INFO 69123 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-13 14:01:57.663  INFO 69123 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-13 14:01:57.717  INFO 69123 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-13 14:01:57.758  WARN 69123 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-13 14:01:57.849  INFO 69123 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-13 14:01:57.893  INFO 69123 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-02-13 14:01:58.042  INFO 69123 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-13 14:01:58.049  INFO 69123 --- [restartedMain] com.hailin.beizhai.BeizhaiApplication    : Started BeizhaiApplication in 2.229 seconds (JVM running for 2.708)
+2021-02-13 14:04:38.858  INFO 69123 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-02-13 14:04:38.860  INFO 69123 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-02-13 14:04:38.862  INFO 69123 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-02-13 14:04:38.866  INFO 69123 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
