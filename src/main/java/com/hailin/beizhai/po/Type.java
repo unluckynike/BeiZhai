@@ -4,7 +4,7 @@ package com.hailin.beizhai.po;
 @Author: zhouhailin
 @Date: 2021/2/13
 @Time: 1:28 下午
-@Description： 
+@Description： 分类
 */
 
 import javax.persistence.*;

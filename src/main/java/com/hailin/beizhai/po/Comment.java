@@ -4,7 +4,7 @@ package com.hailin.beizhai.po;
 @Author: zhouhailin
 @Date: 2021/2/13
 @Time: 1:32 下午
-@Description： 
+@Description： 评论
 */
 
 import javax.persistence.*;
@@ -29,11 +29,13 @@ public class Comment {
     private Blog blog;
 
     @OneToMany(mappedBy = "parentComment")
-    private List<Comment> replyComments=new ArrayList<>();
+    private List<Comment> replyComments = new ArrayList<>();
 
     @ManyToOne
     private Comment parentComment;
 
+    public Comment() {
+    }
 
     @Override
     public String toString() {
@@ -119,6 +121,5 @@ public class Comment {
         this.createTime = createTime;
     }
 
-    public Comment() {
-    }
+
 }

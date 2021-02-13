@@ -7,10 +7,9 @@ package com.hailin.beizhai.web;
 @Description： 
 */
 
-import com.hailin.beizhai.NotFoundException;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+
 
 @Controller
 public class IndexController {
