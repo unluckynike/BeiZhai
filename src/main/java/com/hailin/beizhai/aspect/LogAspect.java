@@ -23,7 +23,7 @@ import java.util.Arrays;
 public class LogAspect {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    //申明切面 所有请求
+    //声明切面 所有请求
     @Pointcut("execution(* com.hailin.beizhai.web.*.*(..))")
     public void log() {
 

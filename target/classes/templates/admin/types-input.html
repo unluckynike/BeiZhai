@@ -3,15 +3,14 @@
 <head th:replace="admin/_fragments :: head(~{::title})">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>分类新增</title>
+  <title>博客管理</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
-  <link rel="stylesheet" href="../../static/lib/editormd/css/editormd.min.css">
-  <link rel="stylesheet" href="../../static/css/me.css" th:href="@{/css/me.css}">
+  <link rel="stylesheet" href="../../static/css/me.css">
 </head>
 <body>
 
   <!--导航-->
-  <nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small" >
+  <nav th:replace="admin/_fragments :: menu(1)"class="ui inverted attached segment m-padded-tb-mini m-shadow-small" >
     <div class="ui container">
       <div class="ui inverted secondary stackable menu">
         <h2 class="ui teal header item">管理后台</h2>
@@ -39,8 +38,8 @@
   <div class="ui attached pointing menu">
     <div class="ui container">
       <div class="right menu">
-        <a href="#" class="teal active item">发布</a>
-        <a href="#" class="item">列表</a>
+        <a href="#" th:href="@{/admin/types/input}" class="active item">新增</a>
+        <a href="#" th:href="@{/admin/types}" class="teal  item">列表</a>
       </div>
     </div>
   </div>
@@ -48,15 +47,23 @@
   <!--中间内容-->
   <div  class="m-container-small m-padded-tb-big">
      <div class="ui container">
-       <form action="#" method="post" th:action="@{/admin/types}" class="ui form">
-         <div class="field">
+       <form action="#" method="post" th:object="${type}" th:action="*{id}==null ? @{/admin/types} : @{/admin/types/{id}(id=*{id})}"  class="ui form">
+         <input type="hidden" name="id" th:value="*{id}">
+         <div class="required field">
            <div class="ui left labeled input">
              <label class="ui teal basic label">名称</label>
-             <input type="text" name="name" placeholder="分类名称">
+             <input type="text" name="name" placeholder="分类名称" th:value="*{name}">
            </div>
          </div>
 
          <div class="ui error message"></div>
+         <!--/*/
+         <div class="ui negative message" th:if="${#fields.hasErrors('name')}"  >
+           <i class="close icon"></i>
+           <div class="header">验证失败</div>
+           <p th:errors="*{name}">提交信息不符合规则</p>
+         </div>
+          /*/-->
        <div class="ui right aligned container">
          <button type="button" class="ui button" onclick="window.history.go(-1)">返回</button>
          <button class="ui teal submit button">提交</button>
@@ -97,8 +104,8 @@
         <div class="three wide column">
           <h4 class="ui inverted header m-text-thin m-text-spaced ">联系我</h4>
           <div class="ui inverted link list">
-            <a href="#" class="item m-text-thin">Email：lirenmi@163.com</a>
-            <a href="#" class="item m-text-thin">QQ：865729312</a>
+            <a href="#" class="item m-text-thin"></a>
+            <a href="#" class="item m-text-thin"></a>
           </div>
         </div>
         <div class="seven wide column">
