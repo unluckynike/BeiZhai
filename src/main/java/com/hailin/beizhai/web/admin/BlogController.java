@@ -20,6 +20,7 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -61,27 +62,48 @@ public class BlogController {
         return "admin/blogs :: blogList";
     }
 
+    //到新增页面
     @GetMapping("blogs/input")
     public String input(Model model) {
         model.addAttribute("blog", new Blog());
-        model.addAttribute("tags",tagService.listTag());
+        model.addAttribute("tags", tagService.listTag());
         model.addAttribute("types", typeService.listType());//初始化分类
         return INPUT;
     }
 
+    public void setTypeAndTag(Model model) {
+        model.addAttribute("types", typeService.listType());
+        model.addAttribute("tags", tagService.listTag());
+    }
+
+    @GetMapping("blogs/{id}/input")
+    public String editInput(@PathVariable long id, Model model) {
+        setTypeAndTag(model);
+        Blog blog = blogService.getBlog(id);
+        blog.init();
+        model.addAttribute("blog", blog);
+        return INPUT;
+    }
+
     @PostMapping("/blogs")
-    public String post(Blog blog, HttpSession session, RedirectAttributes attributes){
+    public String post(Blog blog, HttpSession session, RedirectAttributes attributes) {
         blog.setUser((User) session.getAttribute("user"));
         blog.setType(typeService.getType(blog.getType().getId()));//blog 对象里的 type 对象
         blog.setTags(tagService.listTag(blog.getTagIds()));//标签 多个
 
-        Blog b= blogService.saveBlog(blog);
-       if (b==null){
-           attributes.addFlashAttribute("message","新增失败");
-       }else {
-           attributes.addFlashAttribute("message","新增成功");
-       }
+        Blog b = blogService.saveBlog(blog);
+        if (b == null) {
+            attributes.addFlashAttribute("message", "新增失败");
+        } else {
+            attributes.addFlashAttribute("message", "新增成功");
+        }
         return REDIRECT_LIST;
     }
 
+    @GetMapping("blogs/{id}/delete")
+    public String delete(@PathVariable Long id, RedirectAttributes attributes) {
+        blogService.deleteBlog(id);
+        attributes.addFlashAttribute("message", "删除成功");
+        return REDIRECT_LIST;
+    }
 }
