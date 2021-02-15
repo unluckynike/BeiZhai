@@ -26,7 +26,7 @@ public class Blog {
     private boolean appreciation;
     private boolean shareStatement;
     private boolean commentabled;
-    private boolean published;
+    private boolean published; //发布
     private boolean recommend;//推荐
     @Temporal(TemporalType.TIMESTAMP)
     private Date createTime;
