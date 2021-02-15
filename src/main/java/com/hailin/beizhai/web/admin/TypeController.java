@@ -33,7 +33,7 @@ public class TypeController {
     private TypeService typeService;
 
     @GetMapping("/types")
-    public String types(@PageableDefault(size = 3, sort = {"id"}, direction = Sort.Direction.DESC) //一页是10个 id降序
+    public String types(@PageableDefault(size = 10, sort = {"id"}, direction = Sort.Direction.DESC) //一页是10个 id降序
                                 Pageable pageable, Model model) {
         model.addAttribute("page", typeService.listType(pageable));
         return "admin/types";

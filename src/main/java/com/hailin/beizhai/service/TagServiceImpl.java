@@ -62,13 +62,12 @@ public class TagServiceImpl implements TagService{
         return null;
     }
 
-
     @Override
     public List<Tag> listTag(String ids) { //1,2,3
-//        return tagRepository.findAll(convertToList(ids));
-    return null;
+        return tagRepository.findAllById(convertToList(ids));
     }
 
+    //字符串 转 数组
     private List<Long> convertToList(String ids) {
         List<Long> list = new ArrayList<>();
         if (!"".equals(ids) && ids != null) {

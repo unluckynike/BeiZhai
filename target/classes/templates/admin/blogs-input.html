@@ -88,9 +88,9 @@
         </div>
       </div>
 
-      <div class="required field">
-        <textarea name="description" th:text="*{description}" placeholder="博客描述..." maxlength="200"></textarea>
-      </div>
+<!--      <div class="required field">-->
+<!--        <textarea name="description" th:text="*{description}" placeholder="博客描述..." maxlength="200"></textarea>-->
+<!--      </div>-->
 
       <div class="inline fields">
         <div class="field">
@@ -169,13 +169,10 @@
     $('#blog-form').submit();
   });
 
-
   $('#publish-btn').click(function () {
     $('[name="published"]').val(true);
     $('#blog-form').submit();
   });
-
-
 
   $('.ui.form').form({
     fields : {
@@ -183,35 +180,35 @@
         identifier: 'title',
         rules: [{
           type : 'empty',
-          prompt: '标题：请输入博客标题'
+          prompt: '提示：请输入博客标题'
         }]
       },
       content : {
         identifier: 'content',
         rules: [{
           type : 'empty',
-          prompt: '标题：请输入博客内容'
+          prompt: '提示：请输入博客内容'
         }]
       },
       typeId : {
         identifier: 'type.id',
         rules: [{
           type : 'empty',
-          prompt: '标题：请输入博客分类'
+          prompt: '提示：请输入博客分类'
         }]
       },
       firstPicture : {
         identifier: 'firstPicture',
         rules: [{
           type : 'empty',
-          prompt: '标题：请输入博客首图'
+          prompt: '提示：请输入博客首图'
         }]
       },
       description : {
         identifier: 'description',
         rules: [{
           type : 'empty',
-          prompt: '标题：请输入博客描述'
+          prompt: '提示：请输入博客描述'
         }]
       }
     }

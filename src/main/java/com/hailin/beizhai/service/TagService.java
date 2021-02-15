@@ -20,7 +20,7 @@ public interface TagService {
 
     List<Tag> listTagTop(Integer size);
 
-    List<Tag> listTag(String ids);
+    List<Tag> listTag(String ids);//1,2,3
 
     Tag updateTag(Long id, Tag tag);
 

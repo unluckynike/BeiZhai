@@ -33,17 +33,20 @@ public class Blog {
     @Temporal(TemporalType.TIMESTAMP)
     private Date updateTime;
 
+    @Transient
+    private String tagIds;//仅为属性 不会录入数据库
+
     @ManyToOne
     private Type type;
 
     @ManyToMany(cascade = {CascadeType.PERSIST})
-    private List<Tag> tags=new ArrayList<>();
+    private List<Tag> tags = new ArrayList<>();
 
     @ManyToOne
     private User user;
 
     @OneToMany(mappedBy = "blog")
-    private List<Comment> comments=new ArrayList<>();
+    private List<Comment> comments = new ArrayList<>();
 
     public Blog() {
     }
@@ -202,5 +205,13 @@ public class Blog {
 
     public void setType(Type type) {
         this.type = type;
+    }
+
+    public String getTagIds() {
+        return tagIds;
+    }
+
+    public void setTagIds(String tagIds) {
+        this.tagIds = tagIds;
     }
 }
