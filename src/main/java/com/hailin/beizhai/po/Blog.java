@@ -33,6 +33,8 @@ public class Blog {
     @Temporal(TemporalType.TIMESTAMP)
     private Date updateTime;
 
+    private String description;
+
     @Transient
     private String tagIds;//仅为属性 不会录入数据库
 
@@ -51,7 +53,6 @@ public class Blog {
     public Blog() {
     }
 
-
     @Override
     public String toString() {
         return "Blog{" +
@@ -68,6 +69,12 @@ public class Blog {
                 ", recommend=" + recommend +
                 ", createTime=" + createTime +
                 ", updateTime=" + updateTime +
+                ", description='" + description + '\'' +
+                ", tagIds='" + tagIds + '\'' +
+                ", type=" + type +
+                ", tags=" + tags +
+                ", user=" + user +
+                ", comments=" + comments +
                 '}';
     }
 
@@ -205,6 +212,14 @@ public class Blog {
 
     public void setType(Type type) {
         this.type = type;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getTagIds() {

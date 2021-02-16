@@ -4,6 +4,7 @@ import com.hailin.beizhai.NotFoundException;
 import com.hailin.beizhai.dao.BlogRepositiry;
 import com.hailin.beizhai.po.Blog;
 import com.hailin.beizhai.po.Type;
+import com.hailin.beizhai.util.MyBeanUtils;
 import com.hailin.beizhai.vo.BlogQuery;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -89,7 +90,8 @@ public class BlogServiceImpl implements BlogService {
         if (b == null) {
             throw new NotFoundException("博客不存在");
         }
-        BeanUtils.copyProperties(blog, b);
+        BeanUtils.copyProperties(blog, b, MyBeanUtils.getNullPropertyNames(blog));
+        b.setUpdateTime(new Date());
         return blogRepositiry.save(b);
     }
 

@@ -16,19 +16,11 @@ public class IndexController {
 
     @GetMapping("/")
     public String index() {
-        System.out.println("mapping get in");
-//       int i = 9 / 0;
-//        System.out.println("sss");
-//        String blog=null;
-//        if(blog==null){
-//            throw   new NotFoundException("页面不存在");
-//        }
-        System.out.println("=====index=======");
         return "index";
     }
 
     @GetMapping("/blog")
-    public String blog(){
+    public String blog() {
         return "blog";
     }
 }

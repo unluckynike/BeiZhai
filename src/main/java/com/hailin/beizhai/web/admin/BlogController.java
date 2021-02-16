@@ -90,8 +90,15 @@ public class BlogController {
         blog.setUser((User) session.getAttribute("user"));
         blog.setType(typeService.getType(blog.getType().getId()));//blog 对象里的 type 对象
         blog.setTags(tagService.listTag(blog.getTagIds()));//标签 多个
+        Blog b ;
+        if (blog.getId()==null){
+            //新增博客
+            b =blogService.saveBlog(blog);
+        }else {
+            //修改博客
+            b =blogService.updateBlog(blog.getId(),blog);
+        }
 
-        Blog b = blogService.saveBlog(blog);
         if (b == null) {
             attributes.addFlashAttribute("message", "新增失败");
         } else {
