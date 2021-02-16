@@ -18,7 +18,7 @@ public interface TagService {
 
     List<Tag> listTag();
 
-    List<Tag> listTagTop(Integer size);
+    List<Tag> listTagTop(Integer size);//根据传值大小查询
 
     List<Tag> listTag(String ids);//1,2,3
 
