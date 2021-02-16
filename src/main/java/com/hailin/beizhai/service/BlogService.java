@@ -11,6 +11,8 @@ public interface BlogService {
 
     Blog getBlog(Long id);
 
+    Blog getAndConvert(long id);
+
     Page<Blog> listBlog(Pageable pageable, BlogQuery blog);
 
     Page<Blog> listBlog(Pageable pageable);
@@ -18,6 +20,8 @@ public interface BlogService {
     Page<Blog> listBlog(String query,Pageable pageable);//搜索
 
     List<Blog> listBlogTop(Integer size);//根据传值大小查询
+
+
 
     Blog saveBlog(Blog blog);
 

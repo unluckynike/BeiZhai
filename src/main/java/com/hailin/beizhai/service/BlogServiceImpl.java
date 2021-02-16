@@ -4,6 +4,7 @@ import com.hailin.beizhai.NotFoundException;
 import com.hailin.beizhai.dao.BlogRepositiry;
 import com.hailin.beizhai.po.Blog;
 import com.hailin.beizhai.po.Type;
+import com.hailin.beizhai.util.MarkdownUtil;
 import com.hailin.beizhai.util.MyBeanUtils;
 import com.hailin.beizhai.vo.BlogQuery;
 import org.springframework.beans.BeanUtils;
@@ -42,6 +43,19 @@ public class BlogServiceImpl implements BlogService {
     @Override
     public Blog getBlog(Long id) {
         return blogRepositiry.findById(id).get();
+    }
+
+    @Override
+    public Blog getAndConvert(long id) {
+        Blog blog=blogRepositiry.findById(id).get();
+        if (blog==null){
+            throw new NotFoundException("博客文章不存在");
+        }
+        Blog b=new Blog();
+        BeanUtils.copyProperties(blog,b);//保存一份原始值
+        String content=b.getContent();
+        b.setContent(MarkdownUtil.markdownToHtmlExtensions(content));//博客文章转换成markdown
+        return b;
     }
 
     //查询
