@@ -17,10 +17,7 @@ import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Predicate;
-import javax.persistence.criteria.Root;
+import javax.persistence.criteria.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -47,13 +44,13 @@ public class BlogServiceImpl implements BlogService {
 
     @Override
     public Blog getAndConvert(long id) {
-        Blog blog=blogRepositiry.findById(id).get();
-        if (blog==null){
+        Blog blog = blogRepositiry.findById(id).get();
+        if (blog == null) {
             throw new NotFoundException("博客文章不存在");
         }
-        Blog b=new Blog();
-        BeanUtils.copyProperties(blog,b);//保存一份原始值
-        String content=b.getContent();
+        Blog b = new Blog();
+        BeanUtils.copyProperties(blog, b);//保存一份原始值
+        String content = b.getContent();
         b.setContent(MarkdownUtil.markdownToHtmlExtensions(content));//博客文章转换成markdown
         blogRepositiry.updateViews(id);//访问次数
         return b;
@@ -76,8 +73,8 @@ public class BlogServiceImpl implements BlogService {
                     predicates.add(criteriaBuilder.equal(root.<Type>get("type").get("id"), blog.getTypeId()));
                 }
                 //推荐
-                if (blog.isRecommend()){
-                    predicates.add(criteriaBuilder.equal(root.<Boolean>get("recommend"),blog.isRecommend()));
+                if (blog.isRecommend()) {
+                    predicates.add(criteriaBuilder.equal(root.<Boolean>get("recommend"), blog.isRecommend()));
                 }
                 criteriaQuery.where(predicates.toArray(new Predicate[predicates.size()]));
                 return null;
@@ -91,14 +88,25 @@ public class BlogServiceImpl implements BlogService {
     }
 
     @Override
+    public Page<Blog> listBlog(Long tagId, Pageable pageable) {//tagId
+        return blogRepositiry.findAll(new Specification<Blog>() {
+            @Override
+            public Predicate toPredicate(Root<Blog> root, CriteriaQuery<?> criteriaQuery, CriteriaBuilder criteriaBuilder) {
+                Join join = root.join("tags");//表连接查询
+                return criteriaBuilder.equal(join.get("id"),tagId);
+            }
+        }, pageable);
+    }
+
+    @Override
     public Page<Blog> listBlog(String query, Pageable pageable) {//搜索
-        return blogRepositiry.findByQuery(query,pageable);
+        return blogRepositiry.findByQuery(query, pageable);
     }
 
     @Override
     public List<Blog> listBlogTop(Integer size) {
-        Sort sort=Sort.by(Sort.Direction.DESC,"updateTime");
-        Pageable pageable= PageRequest.of(0,size,sort);
+        Sort sort = Sort.by(Sort.Direction.DESC, "updateTime");
+        Pageable pageable = PageRequest.of(0, size, sort);
         return blogRepositiry.findTop(pageable);
     }
 
@@ -110,7 +118,7 @@ public class BlogServiceImpl implements BlogService {
             blog.setCreateTime(new Date());//初始化文章信息
             blog.setUpdateTime(new Date());
             blog.setViews(0);
-        }else {
+        } else {
             //修改
             blog.setUpdateTime(new Date());
         }

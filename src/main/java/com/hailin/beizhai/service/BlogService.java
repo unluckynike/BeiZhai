@@ -17,6 +17,8 @@ public interface BlogService {
 
     Page<Blog> listBlog(Pageable pageable);
 
+    Page<Blog> listBlog(Long tagId,Pageable pageable);
+
     Page<Blog> listBlog(String query,Pageable pageable);//搜索
 
     List<Blog> listBlogTop(Integer size);//根据传值大小查询
