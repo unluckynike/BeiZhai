@@ -24,8 +24,8 @@ public class Blog {
     private String flag;
     private Integer views;
     private boolean appreciation;
-    private boolean shareStatement;
-    private boolean commentabled;
+    private boolean shareStatement;//博客信息
+    private boolean commentabled;//评论
     private boolean published; //发布
     private boolean recommend;//推荐
     @Temporal(TemporalType.TIMESTAMP)
