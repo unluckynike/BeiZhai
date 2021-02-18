@@ -4,7 +4,7 @@ package com.hailin.beizhai.interceptor;
 @Author: zhouhailin
 @Date: 2021/2/13
 @Time: 5:13 下午
-@Description： 
+@Description： 拦截器
 */
 
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
