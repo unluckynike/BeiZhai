@@ -58,5 +58,5 @@
 
 ### 👀截图
 
-![](/Users/zhouhailin/idea-code/beizhai/doc/img.png)
+![](doc/img.png)
 
