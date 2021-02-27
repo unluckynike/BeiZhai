@@ -12,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
@@ -43,7 +44,7 @@ public class TagShowController {
         model.addAttribute("tags",tags);
         model.addAttribute("page",blogService.listBlog(id,pageable));//分页查询
         model.addAttribute("activeTagId",id);
-        return "Tags";
+        return "tags";
     }
 
 }

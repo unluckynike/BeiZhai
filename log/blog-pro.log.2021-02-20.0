@@ -1,0 +1,46 @@
+2021-02-20 11:08:15.856  INFO 3038 --- [restartedMain] com.hailin.beizhai.BeizhaiApplication    : Starting BeizhaiApplication using Java 1.8.0_275 on zhouhailindeMacBook-Air.local with PID 3038 (/Users/zhouhailin/idea-code/beizhai/target/classes started by zhouhailin in /Users/zhouhailin/idea-code/beizhai)
+2021-02-20 11:08:15.858 DEBUG 3038 --- [restartedMain] com.hailin.beizhai.BeizhaiApplication    : Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-02-20 11:08:15.859  INFO 3038 --- [restartedMain] com.hailin.beizhai.BeizhaiApplication    : The following profiles are active: dev
+2021-02-20 11:08:15.881  INFO 3038 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-20 11:08:15.881  INFO 3038 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-20 11:08:16.216  INFO 3038 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-20 11:08:16.250  INFO 3038 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 5 JPA repository interfaces.
+2021-02-20 11:08:16.662  INFO 3038 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-20 11:08:16.667  INFO 3038 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-20 11:08:16.667  INFO 3038 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-20 11:08:16.708  INFO 3038 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-20 11:08:16.708  INFO 3038 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 827 ms
+2021-02-20 11:08:16.818  INFO 3038 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-20 11:08:16.847  INFO 3038 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-20 11:08:16.913  INFO 3038 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-20 11:08:16.969  INFO 3038 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-20 11:08:16.970  WARN 3038 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-02-20 11:08:17.217  INFO 3038 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-20 11:08:17.226  INFO 3038 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-02-20 11:08:17.677  INFO 3038 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-20 11:08:17.681  INFO 3038 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-20 11:08:17.726  INFO 3038 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-20 11:08:18.507  WARN 3038 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-20 11:08:18.667  INFO 3038 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-20 11:08:18.732  INFO 3038 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-02-20 11:08:18.913  INFO 3038 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-20 11:08:18.919  INFO 3038 --- [restartedMain] com.hailin.beizhai.BeizhaiApplication    : Started BeizhaiApplication in 3.316 seconds (JVM running for 3.859)
+2021-02-20 11:08:23.410  INFO 3038 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1613542153,1613789778; Hm_lpvt_a71f3b21244c8401ed833cf8a95be732=1613790032] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2021-02-20 11:08:23.414  INFO 3038 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-20 11:08:23.414  INFO 3038 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-02-20 11:08:23.415  INFO 3038 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-02-20 11:08:23.435  INFO 3038 --- [http-nio-8080-exec-1] com.hailin.beizhai.aspect.LogAspect      : ---------doBefore--------
+2021-02-20 11:08:23.435  INFO 3038 --- [http-nio-8080-exec-1] com.hailin.beizhai.aspect.LogAspect      : Requestlog:Requestlog{url='/', ip='0:0:0:0:0:0:0:1', classMethod='com.hailin.beizhai.web.IndexController.index', args=[Page request [number: 0, size 3, sort: updateTime: DESC], {}]}
+2021-02-20 11:08:23.494  WARN 3038 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-02-20 11:08:23.503  WARN 3038 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-02-20 11:08:23.508  INFO 3038 --- [http-nio-8080-exec-1] com.hailin.beizhai.aspect.LogAspect      : Result:index
+2021-02-20 11:08:23.508  INFO 3038 --- [http-nio-8080-exec-1] com.hailin.beizhai.aspect.LogAspect      : ---------doAfter--------
+2021-02-20 11:09:04.538  INFO 3038 --- [http-nio-8080-exec-3] com.hailin.beizhai.aspect.LogAspect      : ---------doBefore--------
+2021-02-20 11:09:04.539  INFO 3038 --- [http-nio-8080-exec-3] com.hailin.beizhai.aspect.LogAspect      : Requestlog:Requestlog{url='/', ip='0:0:0:0:0:0:0:1', classMethod='com.hailin.beizhai.web.IndexController.index', args=[Page request [number: 0, size 3, sort: updateTime: DESC], {}]}
+2021-02-20 11:09:04.557  INFO 3038 --- [http-nio-8080-exec-3] com.hailin.beizhai.aspect.LogAspect      : Result:index
+2021-02-20 11:09:04.557  INFO 3038 --- [http-nio-8080-exec-3] com.hailin.beizhai.aspect.LogAspect      : ---------doAfter--------
+2021-02-20 11:09:36.199  INFO 3038 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-02-20 11:09:36.200  INFO 3038 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-02-20 11:09:36.202  INFO 3038 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-02-20 11:09:36.205  INFO 3038 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

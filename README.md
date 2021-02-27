@@ -21,6 +21,8 @@
 
 [一言 hitokoto](https://hitokoto.cn/)
 
+[百度统计](https://tongji.baidu.com/web/30949752/welcome/login)
+
 [编辑器 Markdown](https://pandao.github.io/editor.md/)
 
 [内容排版 typo.css](https://github.com/sofish/typo.css)
@@ -45,9 +47,14 @@
 
 ### **🧑🏼‍💻工具与环境**
 
+- CentOS
+- 宝塔面板
+- FinalShell
+
 *  IDEA
 *  Maven 3
-*  JDK 8
+*  MySQL5.7
+*  JDK 1.8
 
 ### 👀截图
 
