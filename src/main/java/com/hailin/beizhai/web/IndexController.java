@@ -36,7 +36,7 @@ public class IndexController {
 
 
     @GetMapping("/")
-    public String index(@PageableDefault(size = 3, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
+    public String index(@PageableDefault(size = 8, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
                         Model model) {
         //首页数据
         model.addAttribute("page", blogService.listBlog(pageable));
