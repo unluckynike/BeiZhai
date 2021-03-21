@@ -3,7 +3,7 @@
 <head th:fragment="head(title)">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title th:replace="${title}">博客详情</title>
+    <title th:replace="${title}"></title>
     <link rel="icon" th:href="@{/images/icon.png}" type="image/x-icon"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
     <link rel="stylesheet" href="../../static/lib/editormd/css/editormd.min.css"
@@ -17,12 +17,12 @@
         <div class="ui inverted secondary stackable menu">
             <h2 class="ui teal header item">管理后台</h2>
             <a href="#" th:href="@{/admin/blogs}" class=" m-item item m-mobile-hide"
-               th:classappend="${n==1} ? 'active'"><i class="mini home icon"></i>文章</a>
+               th:classappend="${n==1} ? 'active'"><i class="mini home icon"></i>流风余韵</a>
             <a href="#" th:href="@{/admin/types}" class=" m-item item m-mobile-hide"
-               th:classappend="${n==2} ? 'active'"><i class="mini idea icon"></i>分类</a>
+               th:classappend="${n==2} ? 'active'"><i class="mini idea icon"></i>类书集成</a>
             <a href="#" th:href="@{/admin/tags}" class="m-item item m-mobile-hide"
-               th:classappend="${n==3} ? 'active'"><i class="mini tags icon"></i>标签</a>
-            <a href="#" th:href="@{/}" target="_blank" class="m-item item m-mobile-hide"><i class="mini tags icon"></i>博客</a>
+               th:classappend="${n==3} ? 'active'"><i class="mini tags icon"></i>沧笙踏歌</a>
+            <a href="#" th:href="@{/}" target="_blank" class="m-item item m-mobile-hide"><i class="mini tags icon"></i>功垂竹帛</a>
             <div class="right m-item m-mobile-hide menu">
                 <div class="ui dropdown  item">
                     <div class="text">
@@ -69,7 +69,7 @@
                 </div>
             </div>
             <div class="seven wide column">
-                <h4 class="ui inverted header m-text-thin m-text-spaced ">Blog</h4>
+                <h4 class="ui inverted header m-text-thin m-text-spaced ">独树一帜</h4>
                 <p class="m-text-thin m-text-spaced m-opacity-mini" th:text="#{index.describe}"></p>
             </div>
         </div>

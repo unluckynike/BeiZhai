@@ -3,7 +3,7 @@
 <head th:replace="_fragments ::head(~{::title})">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>博客</title>
+    <title>北斋</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
     <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}">
 </head>
@@ -24,7 +24,7 @@
                 <div class="ui top attached segment">
                     <div class="ui middle aligned two column grid">
                         <div class="column">
-                            <h3 class="ui teal header">博客</h3>
+                            <h3 class="ui teal header">举善举贤</h3>
                         </div>
                         <div class="right aligned column">
                             共 <h2 class="ui orange header m-inline-block m-text-thin" th:text="${page.totalElements}">
@@ -127,7 +127,7 @@
                 <div class="ui segment">
                     <div>
                         <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=280 height=86
-                                src="//music.163.com/outchain/player?type=2&id=31134607&auto=1&height=66"></iframe>
+                                src="//music.163.com/outchain/player?type=2&id=29393032&auto=1&height=66"></iframe>
                     </div>
                 </div>
 
@@ -221,7 +221,7 @@
         $('.m-item').toggleClass('m-mobile-hide');
     });
 
-    $.get("https://v1.hitokoto.cn?c=i&c=d", function (data, status) {
+    $.get("https://v1.hitokoto.cn?c=i", function (data, status) {
         if (status == 'success') {
             $('#poem').html(data.hitokoto);
             if (data.from_who != null) {
